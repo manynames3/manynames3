@@ -6,9 +6,6 @@
 ![AWS DVA](https://img.shields.io/badge/AWS-Developer_Associate-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
 ![Terraform](https://img.shields.io/badge/HashiCorp-Terraform_Associate-7B42BC?style=flat-square&logo=terraform&logoColor=white)
 
-![open to work](https://img.shields.io/badge/open_to-cloud%20·%20DevOps%20·%20solutions_architect_roles-1D9E75?style=flat-square&labelColor=E1F5EE&color=1D9E75)
-![location](https://img.shields.io/badge/Atlanta%2C%20GA-remote--friendly-gray?style=flat-square)
-
 ---
 
 I design and build serverless systems on AWS — event-driven architectures, AI-powered pipelines, and infrastructure managed entirely through code. My projects aren't toy apps: they're production-deployed tools solving real problems in domains I know well, built with the same discipline I'd apply on any engineering team. Every architectural decision here has a reason behind it.
