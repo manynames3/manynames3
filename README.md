@@ -11,49 +11,22 @@
 
 ---
 
-I design and build serverless systems on AWS — event-driven architectures, AI-powered pipelines, and infrastructure managed entirely through code. My projects aren't toy apps: they're production-deployed tools solving real problems in domains I know well, built with the same discipline I'd apply on any engineering team. Every architectural decision here has a reason behind it.
+I design and deploy cloud infrastructure on AWS — choosing the right compute model, integration pattern, and data layer for what the workload actually requires. Sometimes that's serverless. Sometimes it's EC2 with an autoscaling group. The pinned repos below show the output. This is how I think before I write a single line of code.
 
 ---
 
-### Engineering judgment · decisions and rationale
+**It starts with the real problem, not the interesting problem**
 
-| Project | Decision | Why | Outcome |
-|---|---|---|---|
-| `pulpit` | DynamoDB on-demand over RDS | Sermon search is burst-heavy, not steady-state. RDS idles at $15–25/mo regardless of traffic. On-demand scales to zero between Sunday spikes and charges only per request. | ~$2/mo total · right-sized for the load |
-| `super-transcriber` | EventBridge async over Lambda polling | Transcribe jobs run 30–90s. Polling every 5s burns invocations and adds latency jitter. EventBridge fires exactly once on completion — zero wasted compute in between. | Event-driven · no idle invocation cost |
-| `photoscribe-ai` | S3 Vectors over managed vector DB | Pinecone and Weaviate start at $70–100/mo with capacity you pay for whether you use it or not. S3 Vectors stores embeddings at S3 pricing — right for personal-scale semantic search. | $0.023/GB vs $70+/mo floor |
-| `selah` | Cloudflare R2 over S3 for media | Audio files load on every page visit. S3 egress at $0.09/GB accumulates fast for a media-heavy app. R2 is S3-compatible with zero egress fees. | $0 egress · identical integration surface |
+Before choosing a service or designing a schema, I work backwards from what the end user actually needs. What decision are they trying to make? What friction are they trying to avoid? The architecture flows from that — not from what sounds impressive or what I want to practice.
 
----
+**Strong framework first, iteration second**
 
-### How I approach every build
+Good software doesn't start with a sloppy draft. It starts with a clear idea of what you're building and why, what the constraints are, and what tradeoffs you're willing to make. Iteration is necessary — but you need something worth iterating on. Thinking through cost, ease of use, failure modes, and scope before touching a keyboard isn't overthinking. It's just engineering.
 
-**01 — Understand the access pattern before choosing the data layer**
-SQLite for single-writer CLIs. DynamoDB on-demand for bursty serverless APIs. Supabase Postgres when you need relational joins and built-in auth. The access pattern dictates the tool — not the other way around.
+**AI tools accelerate execution, fundamentals prevent getting lost**
 
-**02 — Async by default where latency tolerance allows**
-Synchronous chains hold Lambda invocations open and couple services tightly. EventBridge, SQS, and S3 event triggers decouple producers from consumers and eliminate idle compute cost.
+I use Claude Code and Codex to move fast — generating boilerplate, debugging, iterating on implementations. But I don't use them as a crutch. Understanding what's actually happening in the code means I can course-correct when the output is wrong, ask better questions, and make judgment calls the model can't make for me. Speed without comprehension is just faster mistakes.
 
-**03 — IaC from the first resource, no exceptions**
-Every project provisions via Terraform. No console click-ops, no configuration drift, no forgotten resources generating charges. Tear down and redeploy with a single command.
+**Every architectural decision has a reason**
 
-**04 — Only provision what the current problem actually requires**
-Over-engineered infrastructure is a liability — more to maintain, more to debug, more to explain. The question isn't "what could we add?" It's "what's the minimum surface area that solves this well?"
-
----
-
-### Stack
-
-**Cloud & Infra**
-`AWS Lambda` `AWS Bedrock` `DynamoDB` `S3` `EventBridge` `API Gateway` `Cognito` `Terraform`
-
-**Frontend & Edge**
-`React` `TypeScript` `Cloudflare Pages` `Cloudflare R2`
-
-**Backend & Data**
-`Python` `Node.js` `Supabase` `SQLite` `Playwright`
-
-**AI / ML**
-`AWS Bedrock` `Titan Embeddings` `Amazon Transcribe` `RAG pipelines`
-
----
+I don't default to the most powerful option or the most familiar one. I ask: what does this workload actually look like? Burst-heavy or steady-state? Single writer or concurrent? Latency-sensitive or async-tolerant? The answers determine the data layer, the integration pattern, and the provisioning model. The goal is the minimum surface area that solves the problem well — nothing bloated, nothing missing.
