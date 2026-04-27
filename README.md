@@ -6,6 +6,9 @@
 ![AWS DVA](https://img.shields.io/badge/AWS-Developer_Associate-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
 ![Terraform](https://img.shields.io/badge/HashiCorp-Terraform_Associate-7B42BC?style=flat-square&logo=terraform&logoColor=white)
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Aiden_Rhaa-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/aidenrhaa)
+[![Email](https://img.shields.io/badge/Email-aidenrhaacloud%40gmail.com-gray?style=flat-square)](mailto:aidenrhaacloud@gmail.com)
+
 ---
 
 I design and build serverless systems on AWS — event-driven architectures, AI-powered pipelines, and infrastructure managed entirely through code. My projects aren't toy apps: they're production-deployed tools solving real problems in domains I know well, built with the same discipline I'd apply on any engineering team. Every architectural decision here has a reason behind it.
@@ -54,19 +57,3 @@ Over-engineered infrastructure is a liability — more to maintain, more to debu
 `AWS Bedrock` `Titan Embeddings` `Amazon Transcribe` `RAG pipelines`
 
 ---
-
-### Projects
-
-| Project | Description | Stack |
-|---|---|---|
-| [pulpit](https://github.com/manynames3/pulpit) | Search any sermon from a church's entire YouTube archive using natural language. Serverless RAG on AWS Bedrock. | Terraform · Lambda · DynamoDB · Cognito |
-| [paranalyzer](https://github.com/manynames3/paranalyzer) | AI-powered flip/rental deal analysis with Zillow heat index, ROI/IRR, and cash-on-cash modeling. | React · TypeScript · Supabase |
-| [super-transcriber](https://github.com/manynames3/super-transcriber) | Low-cost audio transcription: MP3 → S3 → async Transcribe job → EventBridge completion event. | TypeScript · Lambda · Cloudflare Pages |
-| [probate-bot](https://github.com/manynames3/probate-bot) | Playwright CLI + web UI scraping live probate leads from GA county portals. Deduped CSV/JSON export. | Python · SQLite · Playwright |
-| [selah](https://github.com/manynames3/selah) | Daily devotional songwriting journal — upload Suno tracks with lyrics and artwork. Animated vinyl UI. | HTML · Cloudflare Pages · R2 · Supabase |
-| [photoscribe-ai](https://github.com/manynames3/photoscribe-ai) | Semantic photo search using AWS Bedrock vision, Titan embeddings, and S3 Vectors. | Python · Lambda · TypeScript · Cloudflare |
-
----
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Aiden_Rhaa-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/aidenrhaa)
-[![Email](https://img.shields.io/badge/Email-aidenrhaacloud%40gmail.com-gray?style=flat-square)](mailto:aidenrhaacloud@gmail.com)
