@@ -21,11 +21,11 @@ Before choosing a service or designing a schema, I work backwards from what the 
 
 **Strong framework first, iteration second**
 
-Good software doesn't start with a sloppy draft. It starts with a clear idea of what you're building and why, what the constraints are, and what tradeoffs you're willing to make. Iteration is necessary — but you need something worth iterating on. Thinking through cost, ease of use, failure modes, and scope before touching a keyboard isn't overthinking. It's just engineering.
+Good software doesn't start with a sloppy draft; it starts with a clear understanding of the "why." While I use AI to accelerate the build, my projects are iterated multiple times with a focus on the person actually using them. By thinking through friction points and usability after the initial build, I ensure the final output represents a deliberate engineering process rather than just a first-draft prototype.
 
 **AI tools accelerate execution, fundamentals prevent getting lost**
 
-I use Claude Code and Codex to move fast — generating boilerplate, debugging, iterating on implementations. But I don't use them as a crutch. Understanding what's actually happening in the code means I can course-correct when the output is wrong, ask better questions, and make judgment calls the model can't make for me. Speed without comprehension is just faster mistakes.
+I leverage Claude Code and Codex to move fast—generating boilerplate and iterating on implementations. However, I don't treat AI output as the final product. Featured projects here were reviewed and refined through multiple iterations, focusing specifically on the end user perspective to ensure the UX is intuitive and the architecture is robust. The goal is intentional, high-velocity engineering, not unvetted AI slop.
 
 **Every architectural decision has a reason**
 
