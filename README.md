@@ -3,8 +3,6 @@
 **Product-Minded AWS Infrastructure Engineer**  
 AWS Cloud Engineer · Cloud Infrastructure · DevOps · Platform Engineering
 
-**AWS Solutions Architect Associate · AWS Developer Associate · HashiCorp Terraform Associate**
-
 ![AWS SAA](https://img.shields.io/badge/AWS-Solutions_Architect_Associate-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
 ![AWS DVA](https://img.shields.io/badge/AWS-Developer_Associate-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
 ![Terraform](https://img.shields.io/badge/HashiCorp-Terraform_Associate-7B42BC?style=flat-square&logo=terraform&logoColor=white)
